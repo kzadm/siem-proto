@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SIEM Demo</title>
+  <style>
+        body { font-family: Arial; background: #f5f5f5; padding: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 10px; border: 1px solid #ccc; text-align: left; }
+        th { background: #333; color: #fff; }
+        tr:nth-child(even) { background: #eee; }
+        .critical { background: #ffdddd; }
+        .warning { background: #fff3cd; }
+        .notice { background: #d1ecf1; }
+    </style>
+</head>
+<body>
+  <h1>SIEM-система</h1>
+  <nav>
+    <a href="/add-event/">Добавить событие</a>
+  </nav>
+  <hr>
+  {% block content %}{% endblock %}
+</body>
+</html>

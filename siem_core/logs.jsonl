@@ -1,0 +1,4 @@
+{"time": "2025-06-05T10:00:00", "src": "192.168.1.10", "event_type": "login", "msg": "root login via SSH"}
+{"time": "2025-06-05T10:01:01", "src": "192.168.1.100", "event_type": "failed_login", "msg": "invalid password"}
+{"time": "2025-06-05T10:01:10", "src": "192.168.1.100", "event_type": "failed_login", "msg": "invalid password"}
+{"time": "2025-06-05T10:02:00", "src": "10.0.0.5", "event_type": "scan", "msg": "port scan detected"}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Добавить событие</h2>
+<form method="post">
+  {% csrf_token %}
+  <label>Время (ISO 8601):</label><br>
+  <input type="text" name="time" value="{{ now }}" required><br><br>
+
+  <label>Источник (IP):</label><br>
+  <input type="text" name="src" required><br><br>
+
+  <label>Тип события: ("failed_login")</label><br>
+  <input type="text" name="event_type" required><br><br>
+
+  <label>Сообщение: ("attack", "scan", "exploit", "malware")</label><br>
+  <textarea name="msg" rows="4" cols="40" required></textarea><br><br>
+
+  <button type="submit">Добавить</button>
+</form>
+<br /><br />
+<a href="/">На главную</a>
+{% if success %}
+  <p style="color:green;">Событие добавлено!</p>
+{% endif %}
+{% endblock %}

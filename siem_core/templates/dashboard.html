@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>SIEM Alerts Dashboard</h1>
+    <table>
+        <tr>
+            <th>Time</th><th>Source IP</th><th>Type</th><th>Level</th><th>Alert</th><th>Message</th>
+        </tr>
+        {% for alert in alerts %}
+        <tr class="{{ alert.level }}">
+            <td>{{ alert.timestamp }}</td>
+            <td>{{ alert.source_ip }}</td>
+            <td>{{ alert.event_type }}</td>
+            <td>{{ alert.level }}</td>
+            <td>{{ alert.alert }}</td>
+            <td>{{ alert.message }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
