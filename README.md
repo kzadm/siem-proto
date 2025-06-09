@@ -39,3 +39,8 @@ python manage.py migrate
 ```bash
 python manage.py runserver
 ```
+
+Запуск отслеживания логов в RealTime - в отдельном терминале
+```bash
+python -m siem_core.detector_runner
+```
